@@ -1,0 +1,352 @@
+# This is a basic workflow to help you get started with Actions
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGrip Educational Consulting - Professional & Teacher Development</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and deep blue/teal colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'edugrip-blue': '#1e3a8a', // Deep Blue
+                        'edugrip-teal': '#14b8a6', // Mid Teal
+                        'edugrip-light': '#e0f2f1', // Light Teal Background
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling for navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Brand -->
+                <a href="#home" class="text-2xl font-extrabold text-edugrip-blue tracking-tight rounded-lg p-1">
+                    EduGrip
+                    <span class="text-edugrip-teal font-normal text-xl">Consulting</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-edugrip-blue transition duration-150 ease-in-out font-medium">Home</a>
+                    <a href="#services" class="text-gray-600 hover:text-edugrip-blue transition duration-150 ease-in-out font-medium">Solutions</a>
+                    <a href="#about" class="text-gray-600 hover:text-edugrip-blue transition duration-150 ease-in-out font-medium">Our Impact</a>
+                    <a href="#contact" class="text-white bg-edugrip-teal px-4 py-2 rounded-lg hover:bg-edugrip-blue transition duration-150 ease-in-out shadow-lg">Partner With Us</a>
+                </nav>
+                
+                <!-- Mobile Menu Button (Hamburger Icon) -->
+                <button id="menu-button" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition duration-150">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-inner">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-edugrip-light hover:text-edugrip-blue">Home</a>
+            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-edugrip-light hover:text-edugrip-blue">Solutions</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-edugrip-light hover:text-edugrip-blue">Our Impact</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-edugrip-teal hover:bg-edugrip-blue">Partner With Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section (Focus: B2B/Educator Support) -->
+        <section id="home" class="bg-edugrip-light py-20 sm:py-28 md:py-36">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- UPDATED H1 with new tagline -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-edugrip-blue leading-tight mb-4">
+                    EduGrip: Professional Consulting. <br class="sm:hidden"> Let's help you <span class="text-edugrip-teal">get a grip on it.</span>
+                </h1>
+                <!-- UPDATED P for better connection -->
+                <p class="text-xl sm:text-2xl text-gray-600 mb-10 max-w-4xl mx-auto">
+                    We provide the **clarity and structure** needed to manage complex challenges—from **new teacher development** to **special education compliance**.
+                </p>
+                <a href="#services" class="inline-block bg-edugrip-teal text-white text-xl font-semibold px-8 py-4 rounded-xl shadow-2xl hover:bg-edugrip-blue transform hover:scale-105 transition duration-300 ease-in-out ring-4 ring-edugrip-teal/50">
+                    Explore Our Solutions &rarr;
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Services Section (Focus: Three Core Pillars) -->
+        <section id="services" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-edugrip-blue mb-4">Our Core Solutions for Educators and Districts</h2>
+                <p class="text-center text-xl text-gray-600 mb-16">Driving teacher excellence and ensuring effective special education support.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    
+                    <!-- Service Card 1: Professional Learning -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-edugrip-teal transform hover:-translate-y-1">
+                        <div class="text-edugrip-teal mb-4">
+                            <!-- Icon: Graduation Cap/Training -->
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6M9 18h6"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-edugrip-blue mb-3">Custom PD & Staff Workshops</h3>
+                        <p class="text-gray-600">Targeted, evidence-based training for staff on curriculum alignment, instructional technology, equity practices, and administrative leadership.</p>
+                    </div>
+
+                    <!-- Service Card 2: New Teacher Growth -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-edugrip-teal transform hover:-translate-y-1">
+                        <div class="text-edugrip-teal mb-4">
+                            <!-- Icon: Document/Growth -->
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-edugrip-blue mb-3">New Teacher Mentorship & Induction</h3>
+                        <p class="text-gray-600">Structured coaching programs designed to reduce first-year teacher turnover, improve classroom management, and accelerate professional effectiveness.</p>
+                    </div>
+
+                    <!-- Service Card 3: Special Education Support -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-edugrip-teal transform hover:-translate-y-1">
+                        <div class="text-edugrip-teal mb-4">
+                            <!-- Icon: Briefcase/Case Management -->
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.518 23.518 0 0112 15c-3.18 0-6.357-.62-9-1.745M16 4V2a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 4h.01M12 17l4-4-4-4m-4 4l4-4 4 4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-edugrip-blue mb-3">SpEd Compliance & Parent Advocacy</h3>
+                        <p class="text-gray-600">Navigating IEP/504 plans, providing compliance training for district staff, and offering direct consultation/advocacy support for parents.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Section (The EduGrip Impact) -->
+        <section id="about" class="bg-edugrip-blue/90 py-16 sm:py-24 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Our Impact: Reducing Turnover, Boosting Compliance</h2>
+                <p class="text-center text-xl text-edugrip-light mb-16 max-w-3xl mx-auto">We partner with schools and families to create sustainable, compliant, and effective educational environments.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Pillar 1: Teacher Retention -->
+                    <div class="text-center p-6 rounded-xl bg-edugrip-blue border-b-4 border-edugrip-teal shadow-xl">
+                        <div class="text-edugrip-teal mb-3 text-4xl">🤝</div>
+                        <h3 class="text-xl font-semibold mb-2">Teacher Retention</h3>
+                        <p class="text-gray-200 text-base">Our targeted mentorship programs decrease first-year attrition rates, saving districts significant recruitment costs.</p>
+                    </div>
+
+                    <!-- Pillar 2: Data-Driven PD -->
+                    <div class="text-center p-6 rounded-xl bg-edugrip-blue border-b-4 border-edugrip-teal shadow-xl">
+                        <div class="text-edugrip-teal mb-3 text-4xl">📊</div>
+                        <h3 class="text-xl font-semibold mb-2">Measurable Growth</h3>
+                        <p class="text-gray-200 text-base">All professional learning is tied to measurable outcomes, ensuring a positive return on investment in staff capacity.</p>
+                    </div>
+
+                    <!-- Pillar 3: Compliance & Equity -->
+                    <div class="text-center p-6 rounded-xl bg-edugrip-blue border-b-4 border-edugrip-teal shadow-xl">
+                        <div class="text-edugrip-teal mb-3 text-4xl">🛡️</div>
+                        <h3 class="text-xl font-semibold mb-2">Compliance Assurance</h3>
+                        <p class="text-gray-200 text-base">Expert guidance in special education laws (IDEA/504) to maintain compliance and promote equitable student outcomes.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Testimonials Section (Focus: District/Educator Feedback) -->
+        <section class="py-16 sm:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-edugrip-blue mb-12">Partnerships That Drive Success</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Testimonial 1 (Teacher/PD Focus) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <p class="text-lg italic text-gray-700 mb-4">"The training on automating **Specially Designed Instruction (SDI)** strategies was a game-changer. It saved me hours and made my content accessible to every student immediately."</p>
+                        <p class="font-semibold text-edugrip-blue">- James R., High School Math Teacher</p>
+                    </div>
+
+                    <!-- Testimonial 2 (Special Ed Focus) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <p class="text-lg italic text-gray-700 mb-4">"As a parent, navigating the IEP process was overwhelming. EduGrip's advocacy support ensured my child received the services they were legally entitled to."</p>
+                        <p class="font-semibold text-edugrip-blue">- Laura P., Parent of a Special Needs Student</p>
+                    </div>
+                    
+                    <!-- Testimonial 3 (Professional Development) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <p class="text-lg italic text-gray-700 mb-4">"The PD workshop on Universal Design for Learning (UDL) was the most immediately applicable training I've ever received. Highly relevant and engaging."</p>
+                        <p class="font-semibold text-edugrip-blue">- Ms. Chen, High School Educator</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="py-16 sm:py-24 bg-edugrip-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-edugrip-blue mb-4">Partner With EduGrip Today</h2>
+                <p class="text-center text-xl text-gray-600 mb-12">Ready to invest in your teachers, parents, and students? Let's discuss a tailored plan.</p>
+                
+                <div class="flex flex-col lg:flex-row items-start lg:space-x-12">
+                    
+                    <!-- Contact Form (Mock) -->
+                    <div class="w-full lg:w-2/3 bg-white p-8 sm:p-12 rounded-xl shadow-2xl">
+                        <form onsubmit="event.preventDefault(); showMessage('Thank you for your interest! A consultant will contact you within one business day.');" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name / Organization Contact</label>
+                                <input type="text" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-edugrip-teal focus:border-edugrip-teal transition duration-150">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-edugrip-teal focus:border-edugrip-teal transition duration-150">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700">Area of Interest</label>
+                                <select id="service" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-edugrip-teal focus:border-edugrip-teal transition duration-150">
+                                    <option>Custom PD & Staff Workshops (District/School)</option>
+                                    <option>New Teacher Mentorship & Induction (District/School)</option>
+                                    <option>Special Education Support/Consultation (District/Parent)</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Your Needs</label>
+                                <textarea id="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-edugrip-teal focus:border-edugrip-teal transition duration-150"></textarea>
+                            </div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-base font-medium text-white bg-edugrip-teal hover:bg-edugrip-blue transition duration-300 transform hover:scale-[1.01]">
+                                Request Partnership
+                            </button>
+                            <!-- Message Box Area -->
+                            <div id="message-box" class="mt-4 p-4 rounded-lg text-center font-medium hidden" role="alert"></div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="w-full lg:w-1/3 mt-10 lg:mt-0 space-y-8 p-8 bg-edugrip-blue text-white rounded-xl shadow-2xl">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-edugrip-teal">Contact Details</h3>
+                            <p class="flex items-center">
+                                <span class="mr-3 text-edugrip-teal text-xl">📞</span> (404) 820-7935
+                            </p>
+                            <p class="flex items-center">
+                                <span class="mr-3 text-edugrip-teal text-xl">📧</span> info@edugrip.com
+                            </p>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-edugrip-teal">Office Hours</h3>
+                            <!-- UPDATED: Monday - Saturday -->
+                            <p class="text-gray-200">Monday - Saturday: 9:00 AM - 6:00 PM (EST)</p>
+                            <p class="text-gray-200">Consultation by Appointment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-semibold text-edugrip-teal mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-edugrip-teal transition duration-150">Home</a></li>
+                        <li><a href="#services" class="hover:text-edugrip-teal transition duration-150">Solutions</a></li>
+                        <li><a href="#about" class="hover:text-edugrip-teal transition duration-150">Our Impact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-edugrip-teal mb-3">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-edugrip-teal transition duration-150">PD Topics</a></li>
+                        <li><a href="#" class="hover:text-edugrip-teal transition duration-150">SpEd Compliance Guide</a></li>
+                        <li><a href="#" class="hover:text-edugrip-teal transition duration-150">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-2">
+                    <h4 class="font-semibold text-edugrip-teal mb-3">EduGrip Educational Consulting</h4>
+                    <p class="text-sm">Partnering to achieve excellence in teaching and compliant, equitable student support.</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center text-sm">
+                &copy; 2025 EduGrip Educational Consulting. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Function to show custom message instead of alert()
+        function showMessage(text) {
+            const messageBox = document.getElementById('message-box');
+            messageBox.textContent = text;
+            messageBox.classList.remove('hidden');
+            messageBox.classList.add('bg-green-100', 'text-green-800');
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+                messageBox.classList.remove('bg-green-100', 'text-green-800');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
